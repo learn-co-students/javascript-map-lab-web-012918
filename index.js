@@ -23,13 +23,11 @@ const zebraStripes = [
 ];
 
 const sortedRobots = robots.map(robot => {
-  alliance = knownDecepticons.includes(robot.name)? 'decepticon' : 'autobot'
+  let alliance = knownDecepticons.includes(robot.name)? 'decepticon' : 'autobot'
   return Object.assign({}, robot, {alliance: alliance})
 })
 
-
-
 const coloredZebraStripes = zebraStripes.map((stripe, index) => {
-  color = (index%2 === 0 ? "black" : "white")
+  let color = (index % 2 === 0 ? "black" : "white")
   return Object.assign({}, stripe, {color: color})
 })
